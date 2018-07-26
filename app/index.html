@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <ul class="menu">
+    <li>
+      <a ui-sref="profile">profile</a>
+    </li>
+    <li>
+      <a ui-sref="registration">registration</a>
+    </li>
+  </ul>
+
+  <div class="container">
+    <div ui-view></div>
+
+  </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+  -->
+
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD2n9qUZ1v6eR93VC-hFTwD4syV3aZ3R_A",
+      authDomain: "angularjs-auth-df5a7.firebaseapp.com",
+      databaseURL: "https://angularjs-auth-df5a7.firebaseio.com",
+      projectId: "angularjs-auth-df5a7",
+      storageBucket: "angularjs-auth-df5a7.appspot.com",
+      messagingSenderId: "794850431696"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <script src="lib/angular/angular.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/auth/auth.module.js"></script>
+  <script src="js/auth/filters.js"></script>
+  <script src="js/auth/auth.controller.js"></script>
+  <script src="js/auth/auth.profile.controller.js"></script>
+
+  <script src="js/auth/auth.route.js"></script>
+  <script src="js/auth/auth.service.js"></script>
+  <script src="js/auth/auth.users.service.js"></script>
+</body>
+
+</html>
